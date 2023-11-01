@@ -107,8 +107,8 @@ int main (void)
 						_delay_ms(10);
 						DIO_voidSetPinValue(DIO_u8PORTD, 3 ,0);
 
-					 if (isdigit(Received_string[j]))     //ERROR when using isdigit() and
-					 {														 //comparing Ascii codes
+					 if (isdigit(Received_string[j]))     
+					 {					
 
 						 AZangle[Local_AZPtrIndx]=Received_string[j];
 
@@ -175,26 +175,5 @@ int main (void)
 }
 }
 
-//void SerComm() {
-//  // initialize readings
-//  char ComputerRead[32] = "";
-//  char Azimuth[5] = "";
-//  char Elevation[5] = "";
-//
-//  while(Serial.available()) {
-//    ComputerRead= Serial.readString();  // read the incoming data as string
-////    Serial.println(ComputerRead);     // echo the reception for testing purposes
-//  }
-//
-//// Detecting Azimuth angle <AZxxx.x>
-//    for (int i = 0; i <= ComputerRead.length(); i++) {
-//     if ((ComputerRead.charAt(i)  == 'A')&&(ComputerRead.charAt(i+1) == 'Z')){
-//      for (int j =  i+2; j <= ComputerRead.length(); j++) {
-//        if (isDigit(ComputerRead.charAt(j)))  {                   // if the character is number
-//          Azimuth  = Azimuth + atoi(ComputerRead[j]);          ///////////////////////atoi
-//        }
-//        else {break;}
-//      }
-//     }
-//    }
+
 
